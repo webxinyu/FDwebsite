@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="孚点商贸是一家新零售创业公司,对新的零售和新农业的一种探索,以及对未来饮食健康的一种探索!"/>
+		<meta name="Keywords" content="孚点,孚点便利店,孚点商贸,便利店,生态农业,废品回收,孚点生态圈"/>
+		<title>孚点商贸官网</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-4.2.6.min.css"/>
+		<style type="text/css">
+			html,body {
+				background: #fff;
+			}
+			.typePage {				/* 版心 */
+				width: 1200px;
+				margin: 0 auto;
+			}
+			.header {
+				width: 100%;
+				height: 90px;
+				border-bottom: 1px #e7e7e7 solid;
+			}
+			header {
+				width: 1200px;
+				height: 90px;
+				clear: both;
+				margin: 0 auto;
+			}
+			.logo {						/* logo */
+				float: left;
+				height: 90px;
+				width: 180px;
+				background: #f60;
+			}
+			.nav {						/* 导航列表 */
+				float: left;
+				display: flex;
+				width: 690px;
+				margin-left: 93px;
+			}
+			.nav li {
+				flex: 1;
+				height: 90px;
+			}
+			.nav li>span {
+				display: inline-block;
+				height: 88px;
+				line-height: 88px;
+				border-bottom: 2px #fff solid;
+				font-size: 14px;
+				color: #626262;
+			}
+			.nav li>span:hover {
+				color: #FF6600;
+				cursor: pointer;
+				border-bottom: 2px #f60 solid;
+			}
+			.nav li:nth-of-type(2) {
+				position: relative;
+			}
+			.nav li:nth-of-type(2):hover .industryList{
+				display: block;
+			}
+			.industryList {						/* 二级导航 */
+				display: none;
+				position: absolute;
+				z-index: 99;
+				top: 91px;
+				left: 50%;
+				margin-left:-1890px;
+				width: 4000px;
+				background: #fff;
+				height: 90px;
+				text-align: center;
+			}
+			.industryList li {
+				display: inline-block;
+				height: 90px;
+				padding: 0 50px;
+				cursor: pointer;
+			}
+			.industryList li:hover>h2,
+			.industryList li:hover .iconfont{
+				color: #f60;
+			}
+			.industryList li>h2 {
+				font-size: 12px;
+				color: #868686;
+				font-weight: normal;
+			}
+			.industryList li>h1 .iconfont {
+				color: #868686;
+				font-size: 30px;
+				font-weight: normal;
+			}
+			.industryList li>h1 {
+				margin-top: 16px;
+			}
+			.websiteTel {					/* 热线电话 */
+				float: right;
+				height: 90px;
+				width: 132px;
+				overflow: hidden;
+			}
+			.websiteTelImg {
+				height: 90px;
+				width: 32px;
+				float: left;
+				background: #f60;
+			}
+			.telNumber {
+				width: 100px;
+				float: right;
+				padding-top: 33px;
+			}
+			.telNumber>h4 {
+				font-size: 12px;
+				color: #6c6c6c;
+				font-weight: normal;
+				text-align: right;
+			}
+			.banner,.swiper-wrapper {
+				height: 514px;
+			}
+			.typePage h1{				/* 大标题 */
+				height: 64px;
+				margin-top: 35px;
+				line-height: 64px;
+				font-size: 36px;
+				color: #262626;
+				text-align: center;
+			}
+			.typePage h4{				/* 小标题 */
+				height: 46px;
+				line-height: 46px;
+				font-size: 18px;
+				color: #535353;
+				text-align: center;
+				font-weight: normal;
+			}
+			.fourBusiness ul{				/* 四大产业 */
+				margin-top: 36px;
+				display: flex;
+			}
+			.fourBusiness ul li {
+				flex: 1;
+			}
+			.businessImg {
+				text-align: center;
+			}
+			.fourBusiness ul li h2 {
+				height: 50px;
+				line-height: 50px;
+				font-size: 28px;
+				text-align: center;
+			}
+			.fourBusiness ul li p {
+				line-height: 30px;
+				text-align: center;
+				font-size: 14px;
+				padding: 0 50px;
+				color: #6d6d6d;
+			}
+			.newsConsultation {					/* 商讯快讯 */
+				margin-top: 50px;
+				overflow: hidden;
+			}
+			.newsList {
+				float: left;
+				width: 600px;
+			}
+			.activityList {
+				float: right;
+				width: 500px;
+			}
+			.newsTitle {
+				height: 40px;
+				position: relative;
+			}
+			.newsTitle>h2 {
+				font-size: 16px;
+				padding-left: 18px;
+				border-left: 2px #f60 solid;
+				font-weight: normal;
+			}
+			.newsTitle>span {
+				position: absolute;
+				right: 0;
+				top: 0;
+				font-size: 14px;
+				color: #808080;
+			}
+			.fisrstNews {
+				width: 600px;
+				height: 120px;
+			}
+			.fisrstNews>img {
+				float: left;
+				width: 180px;
+			}
+			.firstCon {
+				float: right;
+				width: 400px;
+				height: 120px;
+				position: relative;
+			}
+			.firstCon h3 {
+				font-size: 16px;
+				color: #515151;
+				height: 30px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.firstCon p {
+				font-size: 14px;
+				color: #4b4b4b;
+			}
+			.firstCon>span {
+				font-size: 12px;
+				color: #b7b7b7;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+			.newsRanking li {
+				height: 45px;
+				overflow: hidden;
+			}
+			.newsRanking li>p {
+				height: 45px;
+				line-height: 45px;
+				font-size: 13px;
+				color: #666;
+				width: 520px;
+				float: left;
+			}
+			.newsRanking li>span {
+				height: 45px;
+				line-height: 45px;
+				width: 80px;
+				text-align: right;
+				float: right;
+				font-size: 12px;
+				color: #B7B7B7;
+			}
+			.newsRanking li:hover>p {
+				color: #c60000;
+			}
+			.newsRanking li:hover>span {
+				color: #c60000;
+			}
+			.activityList>h2 {				/* 扫码关注公众号 */
+				font-size: 16px;
+				padding-left: 18px;
+				border-left: 2px #f60 solid;
+				font-weight: normal;
+			}
+			.activityList>h3 {
+				font-weight: normal;
+				text-align: center;
+			}
+			.qrCode {
+				text-align: center;
+			}
+			footer {
+				height: 60px;
+				background: #333;
+			}
+			.copyRight {
+				width: 1200px;
+				height: 60px;
+				line-height: 60px;
+				color: #fff;
+				font-size: 16px;
+				text-align: center;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<header>
+				<div class="logo">
+					<img src="" >
+				</div>
+				<ul class="nav">
+					<li><span>首页</span></li>
+					<li>
+						<span>孚点产业</span>
+						<ol class="industryList">
+							<li>
+								<h1><i class="iconfont icon-shop"></i></h1>
+								<h2>孚点便利店</h2>
+							</li>
+							<li>
+								<h1><i class="iconfont icon-send"></i></h1>
+								<h2>孚点健康</h2>
+							</li>
+							<li>
+								<h1><i class="iconfont icon-refund"></i></h1>
+								<h2>废品回收</h2>
+							</li>
+						</ol>
+					</li>
+					<li><span>新闻资讯</span></li>
+					<li><span>孚点未来</span></li>
+					<li><span>关于我们</span></li>
+				</ul>
+				<div class="websiteTel">
+					<div class="websiteTelImg">
+						<img src="" >
+					</div>
+					<div class="telNumber">
+						<h4>官方服务热线</h4>
+						<h4>0370-2578998</h4>
+					</div>
+				</div>
+			</header>
+		</div>	
+		<section class="banner">
+			<div class="swiper-container">
+			  <div class="swiper-wrapper">
+				<div class="swiper-slide" style="background: #007AFF;">slider1</div>
+				<div class="swiper-slide" style="background: #FF6600;">slider2</div>
+				<div class="swiper-slide" style="background: #f00;">slider3</div>
+			  </div>
+			  <div class="swiper-pagination"></div>
+			</div>
+		</section>
+		<!-- 版心 -->
+		<div class="typePage">
+			<section class="fourBusiness">
+				<h1>孚点商贸四大产业</h1>
+				<h4>孚点砂锅面貌以创新、奋斗、诚信为宗旨探索新零售，发展孚点生态</h4>
+				<ul>
+					<li>
+						<div class="businessImg">
+							<img src="img/business02.png" >
+						</div>
+						<h2>孚点便利</h2>
+						<p>孚点便利店更加注重消费者的线下购物体验，给生活带来更多的便利。购物买到的不仅是好的商品，更是一种快乐的心情！</p>
+					</li>
+					<li>
+						<div class="businessImg">
+							<img src="img/business04.png" >
+						</div>
+						<h2>废品回收</h2>
+						<p>废品回收利用，对生活垃圾进行分类，保护环境从我做起。孚点废品回收，做到资源循环利用，为美丽地球贡献一份力量。</p>
+					</li>
+					<li>
+						<div class="businessImg">
+							<img src="img/business03.png" >
+						</div>
+						<h2>孚点健康</h2>
+						<p>俗话说并从口入，我们的很多疾病都是因为饮食而引起的，孚点健康产业就是从根源解决人们身体健康问题，健康饮食，健康生活。</p>
+					</li>
+					<li>
+						<div class="businessImg">
+							<img src="img/business01.png" >
+						</div>
+						<h2>孚点科技</h2>
+						<p>孚点科技是为孚点商贸的所有产业发展提供技术支持，探索人工智能在零售方面的应用。</p>
+					</li>
+				</ul>
+			</section>
+			<section class="slogan">
+				<h1>孚点生态</h1>
+				<h4>生活因健康而美好</h4>
+				<div class="sloganImg">
+					<img src="img/slogan.png" >
+				</div>
+			</section>
+			<section class="newsConsultation">
+				<div class="newsList">
+					<div class="newsTitle">
+						<h2>商讯快讯</h2>
+						<span id="moreNews">更多&gt;</span>
+					</div>
+					<div class="fisrstNews">
+						<img src="img/newsImg.png" >
+						<div class="firstCon">
+							<h3>春节将至，年货预定开启。</h3>
+							<p>马上就要过年了，大家现在开始预定年货了，方便又时尚的年货购买就到孚点便利店，地址睢阳区神火大道与香君路交叉口北300米路东孚点便利店。</p>
+							<span>2019-01-07</span>
+						</div>
+					</div>
+					<ul class="newsRanking">
+						<li><p>商丘市孚点商贸有限公司成立。</p><span>2018-11-01</span></li>
+						<li><p>商丘市孚点商贸有限公司成立。</p><span>2018-11-01</span></li>
+						<li><p>商丘市孚点商贸有限公司成立。</p><span>2018-11-01</span></li>
+						<li><p>商丘市孚点商贸有限公司成立。</p><span>2018-11-01</span></li>
+					</ul>
+				</div>
+				<div class="activityList">
+					<h2>最新活动</h2>
+					<h3>微信扫一扫关注公众号<br>精彩生活从这里开始</h3>
+					<div class="qrCode">
+						<img src="img/fd0.5m.jpg" >
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer>
+			<div class="copyRight">
+				Copyright@2017 商丘市孚点商贸有限公司 All rights reserved.
+			</div>
+		</footer>
+		
+		
+		
+		
+		<script src="js/jQuery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-4.2.6.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var mySwiper = new Swiper('.swiper-container', {
+				autoplay: true,//可选选项，自动滑动
+				loop:true,
+				pagination: {
+					el: '.swiper-pagination',
+				  },
+			})
+		</script>
+	</body>
+</html>
